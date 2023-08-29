@@ -60,7 +60,7 @@ CONTRIBUTORS_TEMPLATE = """
 </span>
 """
 
-logger = logging.getLogger("mkdocs.mkdocs_turing_plugins.contributors")
+logger = logging.getLogger("mkdocs.mkdocs_cake_plugins.contributors")
 
 class ContributorsPlugin(BasePlugin):
     config_scheme = (
@@ -129,7 +129,7 @@ class ContributorsPlugin(BasePlugin):
         return re.sub(r"(\n| {2,})", "", raw).strip()
 
     def _fetch_contributors_from_github(self, path: str) -> list:
-        fetch_url = f"https://github.com/LuminolT/SHU-Cyberspace-Security-101/contributors-list/master/{path}"
+        fetch_url = f"https://github.com/shu-cake1salie/SHU-Cyberspace-Security-101/contributors-list/master/{path}"
         contributors = []
         try:
             res = requests.get(fetch_url)

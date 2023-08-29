@@ -59,11 +59,11 @@ class ChangelogPlugin(BasePlugin):
                 year = now_year
                 res += f"\n## {year} 年\n"
             commit_sha = commit.hexsha[:7]
-            commit_url = f"https://github.com/LuminolT/SHU-Cyberspace-Security-101/commit/{commit.hexsha}"
+            commit_url = f"https://github.com/shu-cake1salie/SHU-Cyberspace-Security-101/commit/{commit.hexsha}"
             message = commit.message.split("\n")[0]
             if message.startswith("Merge pull request"):
                 continue
-            commit_message = re.sub(r"#(\d+)", r"[#\1](https://github.com/LuminolT/SHU-Cyberspace-Security-101/pull/\1)", message)
+            commit_message = re.sub(r"#(\d+)", r"[#\1](https://github.com/shu-cake1salie/SHU-Cyberspace-Security-101/pull/\1)", message)
             time = commit.committed_datetime.strftime("%m-%d")
 
             changed_filenames = commit.stats.files.keys()
@@ -78,7 +78,7 @@ class ChangelogPlugin(BasePlugin):
             extra_count = 0
             for doc_path in docs_filenames:
                 title = get_title(doc_path).strip()
-                doc_url = doc_path.replace("docs/", "https://zju-turing.github.io/TuringCourses/").replace("index.md", "")
+                doc_url = doc_path.replace("docs/", "https://shu-cake1salie.github.io/SHU-Cyberspace-Security-101/").replace("index.md", "")
                 search_strs = [title] + self.abbrs.get(title, [])
                 _, meta = get_data(open(doc_path, "r", encoding="utf-8").read())
                 if meta.get("abbrs"):

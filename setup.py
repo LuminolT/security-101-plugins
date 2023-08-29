@@ -3,11 +3,11 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='mkdocs-turing-plugins',
+    name='mkdocs-cake-plugins',
     version='0.0.1',
-    author='ZJU Turing',
-    description='A MkDocs plugin used in TuringCourses',
-    url='https://github.com/ZJU-Turing/TuringPlugins',
+    author='Cake1salie',
+    description='A MkDocs plugin used in SHU Cyberspace Security 101',
+    url='https://github.com/LuminolT/security-101-plugins',
     python_requires='>=3.5',
     install_requires=[
         'mkdocs',
@@ -15,9 +15,9 @@ setup(
     ],
     entry_points={
         'mkdocs.plugins': [
-            'turing_changelog = mkdocs_turing_plugins.changelog:ChangelogPlugin',
-            'turing_contributors = mkdocs_turing_plugins.contributors:ContributorsPlugin',
-            'turing_evaluations = mkdocs_turing_plugins.evaluations:EvaluationsPlugin',
+            'turing_changelog = mkdocs_cake_plugins.changelog:ChangelogPlugin',
+            'turing_contributors = mkdocs_cake_plugins.contributors:ContributorsPlugin',
+            # 'turing_evaluations = mkdocs_cake_plugins.evaluations:EvaluationsPlugin',
         ]
     },
     include_package_data=True,
