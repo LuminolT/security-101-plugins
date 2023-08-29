@@ -15,8 +15,8 @@ setup(
     ],
     entry_points={
         'mkdocs.plugins': [
-            'turing_changelog = mkdocs_cake_plugins.changelog:ChangelogPlugin',
-            'turing_contributors = mkdocs_cake_plugins.contributors:ContributorsPlugin',
+            'cake_changelog = mkdocs_cake_plugins.changelog:ChangelogPlugin',
+            'cake_contributors = mkdocs_cake_plugins.contributors:ContributorsPlugin',
             # 'turing_evaluations = mkdocs_cake_plugins.evaluations:EvaluationsPlugin',
         ]
     },
